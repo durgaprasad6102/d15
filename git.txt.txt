@@ -1,0 +1,47 @@
+1.Next Prime Number
+
+
+def is_prime(num):
+    if num < 2:
+        return False
+
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+
+    return True
+
+
+def next_prime(n):
+    num = n + 1
+
+    while True:
+        if is_prime(num):
+            return num
+        num += 1
+
+
+n = int(input())
+print(next_prime(n))
+
+2.anagram
+
+s1 = input()
+s2 = input()
+
+if sorted(s1.lower()) == sorted(s2.lower()):
+    print("Anagram")
+else:
+    print("Not Anagram")
+
+
+example2 of anagram
+
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+
+if sorted(s1.lower()) == sorted(s2.lower()):
+    print("Anagram")
+else:
+    print("Not Anagram")
+
